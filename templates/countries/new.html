@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Create new country</h2>
+
+    <div class="create-country" >
+        <form action="/countries/create" method="post">
+            <div>
+                <label for="country">Name:</label>
+                <input type="text" name="country" id = "country">
+            </div>
+            <p></p>
+            <div>
+                <label for="description">Description:</label>
+                <input type="text" name="description" id = "description">
+            </div>
+            <p></p>
+            <div>
+                <label for="visit">Visited:</label>
+                <input type="checkbox" name="visit" id = "visit">
+            </div>
+          
+            
+            <p></p>
+            <button class="create" type="submit">create</button>
+            <h4><a class="link" href="/countries">cancel</a></h4>
+        </form>
+    </div>
+   
+    
+{% endblock %}
