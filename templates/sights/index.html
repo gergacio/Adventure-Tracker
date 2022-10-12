@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+   <h1>List of sights in {{ city.name }}</h1>
+  
+
+   <div class="all-countries-cities">
+      {% for sight in sights %}
+      <div class="country-city">
+         <h3>Sight: {{ sight.name }}</h3>
+         <h3>City: {{ city.name }}</h3>
+         <div>
+            <form action="/sights/{{ sight.id }}/delete" method="POST">
+               <button type="submit">delete</button>
+            </form>  
+         </div>
+
+      </div>
+     
+      {% endfor %}     
+</div>
+<h4><a class="link" href="/countries">back</a></h4>
+
+</div>
+{% endblock %}

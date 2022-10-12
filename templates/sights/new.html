@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    <div class="container">
+        <h1>Create new sight</h1>
+        <div class="country-city">
+            <form action="/sights/create" method="post">
+                <div>
+                    <label for="sight">Sight Name:</label>
+                    <input type="text" name="sight" id = "sight">
+                </div>
+               
+                <div>
+                    <label for="visit">Visited:</label>
+                    <input type="checkbox" name="visit" id = "visit">
+                </div>
+                <div>
+                    <label for="city">City:</label>
+                    <select id="city" name="city_id">
+                      {% for city in cities %}
+                        <option value="{{ city.id }}">{{ city.name }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+    
+              
+                <button class="create" type="submit">create</button>
+                <h4><a class="link" href="/countries">cancel</a></h4>
+            </form>
+        </div>
+
+    </div>
+ 
+   {% endblock %}
