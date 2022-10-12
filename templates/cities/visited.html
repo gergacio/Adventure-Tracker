@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>List of visited cities</h1>
+<div class="container-visited-stillv ">
+  
+  {% for city in cities %}
+  <div class="visited-still">
+
+  
+     <h2>Name: {{ city.name }}</h2>
+     <h2>Country {{ city.country.name }}</h2>
+  
+  </div>
+  {% endfor %}
+ 
+</div>
+
+
+ 
+
+{% endblock %}
