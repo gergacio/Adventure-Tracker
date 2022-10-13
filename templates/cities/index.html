@@ -3,6 +3,17 @@
 {% block content %}
 <div class="container">
    <h1>List of cities in {{ country.name }}</h1>
+   <div class="city_container_img">
+      <img src="/static/images/cities.jpg" alt="globe" width = 30%>
+   </div>
+   <div>
+      <form action="/searchc" method="GET">
+         <label for="city">Search by country:</label>
+         <input type="text" name="city" id = "city" placeholder="Search by city ...">
+         <button class="delete" type="submit">search</button>
+      </form>
+   </div>
+
   
 
    <div class="all-countries-cities">
