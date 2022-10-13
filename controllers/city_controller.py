@@ -72,6 +72,17 @@ def still_to_visit():
 
      return render_template('/cities/still_to_visit.html',cities = still_visit)   
 
+#search
+@city_blueprint.route('/searchc', methods=["GET"])
+def search_country():
+    found_city = None
+    name = request.args["city"]
+    cities = city_repository.select_all()
+    for city in cities:
+        if city.name.lower() == name.lower():
+            found_city = city
+    return render_template('/cities/city.html', city = found_city)   
+
 
 
 
