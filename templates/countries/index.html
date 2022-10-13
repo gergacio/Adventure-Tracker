@@ -3,14 +3,23 @@
 {% block content %}
 <div class="container">
    <h1>All countries</h1>
+   <div class="country_container_img">
+      <img src="/static/images/countries.jpg" alt="globe">
+   </div>
+
    <div>
-      <img class="country_img" src="/static/images/countries.jpg" alt="globe">
+      <form action="/search" method="GET">
+         <label for="country">Search by country:</label>
+         <input type="text" name="country" id = "country" placeholder="Search by ...">
+         <button class="search" type="submit">search</button>
+      </form>
    </div>
    <div>
       <h4><a class="link" href="/countries/new">new country</a></h4>
    </div>
 
    <div class="all-countries-cities"> 
+
       {% for country in all_countries %}
             
          <div class="country-city">
