@@ -58,6 +58,17 @@ def delete_country(id):
     country_repository.delete(id)
     return redirect ('/countries')
 
+#search
+@countries_blueprint.route('/search', methods=["GET"])
+def search_country():
+    found_country = None
+    name = request.args["country"]
+    countries = country_repository.select_all()
+    for country in countries:
+        if country.name.lower() == name.lower():
+            found_country = country
+    return render_template('/countries/country.html', country = found_country)    
+
 
 
 
