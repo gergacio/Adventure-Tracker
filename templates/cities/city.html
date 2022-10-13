@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+   <h1>City: {{ city.name }}</h1>
+   <div class="city_container_img">
+      <img src="/static/images/cities.jpg" alt="globe">
+   </div>
+
+   <div class="all-countries-cities">
+    
+      <div class="country-city">
+         <h3>City: {{ city.name }}</h3>
+         <h3>Country: {{ city.country.name }}</h3>
+         <h4><a class="link" href="/sights/{{ city.id }}">all sights</a></h4>
+         <h4> <a class="link" href="/sights/new">create new sight</a></h2>
+         <div>
+            <form action="/cities/{{ city.id }}/delete" method="POST">
+               <button type="submit">delete</button>
+            </form>  
+         </div>
+       
+      </div>
+
+    
+    </div>
+    <h4><a class="link" href="/countries">back</a></h4>
+
+</div>
+
+
+{% endblock %}
