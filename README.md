@@ -7,9 +7,9 @@ App track someone's travel adventures.
  The user should be able to create and delete entries for cities
  The app should allow the user to mark destinations as visited or still to see
  
- using only:
+ Tools:
 
   Jinja2
-  Python
-  Flask
-  PostgreSQL
+  Python 3.10
+  Flask 2.2.2
+  PostgreSQL 15
