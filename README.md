@@ -9,7 +9,7 @@ App track someone's travel adventures.
  
  using only:
 
-  HTML / CSS
+  Jinja2
   Python
   Flask
-  PostgreSQL and the psycopg
+  PostgreSQL
